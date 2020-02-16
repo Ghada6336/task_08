@@ -16,10 +16,20 @@
             <li class="list-group-item text-center">
                 <a href="{% url 'restaurant-detail' restaurant.id %}" class="btn btn-outline-dark">View</a>
             </li>
+            <div class="container">
+              {% if restaurant.logo %}
+                <img src="{{restaurant.logo.url}}" alt="logo is locooo">
+              <br>
+              {% endif %}
+
+
+
+              <br>
+            </div>
+
           </ul>
         </div>
     </div>
     {% endfor %}
 </div>
 {% endblock content %}
-
